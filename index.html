@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Spike Magazine</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Georgia", "Times New Roman", serif;
+            background-color: #f4f6fa;
+            color: #111;
+        }
+
+        /* CABECERA */
+
+        /* ===== SPIKE MAGAZINE STYLE HEADER ===== */
+
+        .spike-header {
+            background-color: #0b1d3a;
+            padding: 40px 0 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Franja diagonal */
+        .spike-banner {
+            background-color: #a40000;
+            transform: skewY(-5deg);
+            transform-origin: left center; /* 🔴 CLAVE */
+            padding: 0px 80px;
+            width: 100%;
+            margin-left: 0%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .spike-banner h1 {
+            font-family: Impact, "Arial Black", sans-serif;
+            font-size: 72px;
+            margin: 0;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-shadow: 4px 4px 0 #000;
+        }
+
+        /* ISSUE */
+        .spike-banner .issue {
+            transform: skewY(-5deg);
+            border: 3px solid #ffffff;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* SUBTÍTULO */
+        .spike-subtitle {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-family: Arial, sans-serif;
+            color: #ffffff;              /* 🔴 CLAVE */
+            text-shadow: 2px 2px 0 #000; /* 🔴 CLAVE */
+        }
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+        }
+
+        /* BANNERS */
+        .ad {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .ad img {
+            max-width: 100%;
+        }
+
+        .ad h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #0a2e6d;
+        }
+
+        /* ARTÍCULO */
+        article {
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #ccc;
+        }
+
+        article h2 {
+            font-size: 36px;
+            margin-top: 0;
+            color: #0a2e6d;
+            border-bottom: 3px solid #1e90ff;
+            padding-bottom: 10px;
+        }
+
+        article h3 {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .byline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .columns {
+            column-count: 2;
+            column-gap: 40px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .speaker {
+            font-weight: bold;
+            color: #0a2e6d;
+        }
+
+        .feature-img {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .feature-img img {
+            max-width: 90%;
+            border: 4px solid #0a2e6d;
+        }
+
+        .inline-ad {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+        }
+
+        .inline-ad img {
+        width: 70%;
+        max-width: 300px;
+        border: 2px solid #0a2e6d;
+        padding: 6px;
+        background-color: #fff;
+        }
+
+
+
+        /* PIE */
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #0a2e6d;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="spike-header">
+    <div class="spike-banner">
+        <h1>SPIKE! MAGAZINE</h1>
+    </div>
+
+    <div class="spike-subtitle">
+        THE FANTASY BLOOD BOWL JOURNAL
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- COLUMNA IZQUIERDA - PUBLICIDAD -->
+    <aside class="ad">
+        <h3>Bugman's Beer</h3>
+        <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45" alt="Bugmans Beer">
+        <p>La cerveza favorita de enanos, orcos y comentaristas sobrios.</p>
+    </aside>
+
+    <!-- ARTÍCULO CENTRAL -->
+    <article>
+        <h2>La Liga II: Ahora es Personal</h2>
+        <h3>La expectación se dispara en el mundo del Blood Bowl</h3>
+        <div class="byline">Narrado por Jim Johnson y Bob Bifford</div>
+
+        <!-- IMAGEN DESTACADA -->
+        <div class="feature-img">
+            <img src="https://static.wikia.nocookie.net/labibliotecadelviejomundo/images/5/5e/Jim_y_bob_arte_blood_bowl.jpg/revision/latest?cb=20240208161525&path-prefix=es" alt="Jim y Bob - Blood Bowl">
+        </div>
+
+      <div>
+
+            <p><span class="speaker">Jim Johnson:</span><br>
+            &mdash; Muy buenas tardes, aficionados al Blood Bowl. Se está disparando la expectación por el comienzo de la Liga II: Ahora es personal.</p>
+
+            <p><span class="speaker">Bob Bifford:</span><br>
+            &mdash; Parece que la gente quiere seguir perdiendo su tiempo. No tienen mentalidad de tiburón.</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Yo creo que no tienen mentalidad de nada. Pero ese no es el tema Bob. Ya tenemos a 5 managers que han elegido sus equipos. Por el momento están confirmados que Pely va a jugar con Vampiros, Señor Pablito con habitantes del Inframundo, Elfonochasis llevará a No Muertos, Terrón a Enanos y Valdi a Lagartos.</p>
+            
+            <a href="No hagas click en urls que no debes!"
+            class="inline-ad" target="_blank">
+                <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                    alt="Bugman's Beer">
+            </a>            
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; Estos managers han comprendido bien de qué va todo esto. Me alegra ver que no hay ningún equipo de esos que se dedican a esquivar. ¡Oh, lá lá! Mira aquí, soy un elfo, mira como te esquivo… qué son, ¿franceses?</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; No vayas tan deprisa, Bob. Aún quedan un mínimo de 3 entrenadores por elegir equipo. Además, según las normas, tiene que haber equipos de todo y el Señor Pablito ya se ha prestado públicamente para cambiar de equipo en caso que vea que falta algún tipo de equipos, como equipos ágiles.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; No tengo palabras Jim, y menos para el Señor Pablito. Ese pusilánime que jugó la anterior competición con un equipo de Calvos que parecían elfos.</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Fuentes internas me comentan que el Señor Pablito mismo llegaba al vestuario antes de los partidos con una maquinilla de afeitar y les cortaba el pelo a todos. Excepto a la Señora Lu, la elfa bruja.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; Claramente la mejor jugadora de su equipo. Seguro que era porque no escuchaba al entrenador.</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Los rumores apuntan a la contratación del mismísimo Cholo Simeone para confeccionar el equipo.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; ¿El Cholo? Pero si ese hombre no gana ni a un deporte de mentira como es el fútbol.</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Si por algo se destacan sus equipos es porque son unos guarros. Yo me esperaría ver en cada partido a un mínimo de 3 expulsados.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; ¡Oooh! ¡Por fin un manager con criterio!</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Elfonochasis, pese a lo engañoso de su nombre, está haciendo una pretemporada a marchas forzadas con los No Muertos.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; Un manager que se lo toma en serio. Por fin veremos verdadero progreso.</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Por último, Pely jugará con Vampiros. Parece que se ha convertido él mismo en uno y necesite lacayos para chuparles la sangre.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; Bueno, al menos nos reiremos un rato con todos estos patanes intentando jugar.</p>
+            
+            <a href="No hagas click en urls que no debes!"
+            class="inline-ad" target="_blank">
+                <img src="https://nufflezone.com/wp-content/uploads/2022/07/nurgle-king.png"
+                    alt="Nuffle King">
+            </a>        
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; Información de última hora: contactos entre Taliesin y un equipo de humanos descartes del mítico Reikland Reavers.</p>
+
+            <p><span class="speaker">Bob:</span><br>
+            &mdash; Seguro que los pone a hacer pozos en mitad del partido.</p>
+
+            <p><span class="speaker">Jim:</span><br>
+            &mdash; En cuanto tengamos más noticias seguiremos informando.</p>
+
+        </div>
+    </article>
+
+    <!-- COLUMNA DERECHA - PUBLICIDAD -->
+    <aside class="ad">
+        <h3>Nurgle King</h3>
+        <img src="https://nufflezone.com/wp-content/uploads/2022/07/nurgle-king.png" alt="Nurgle King">
+        <p>Aquí Nurgle es el king.</p>
+
+
+        <hr>
+
+        <h3>Blood Weiser</h3>
+        <img src="https://fumbbl.com/i/431582" alt="Blood Weiser">
+        <p>La cerveza espumosa que hace perder jugadores antes de perder partidos.</p>
+    </aside>
+
+</div>
+
+<footer>
+    © Cabal Vision — Liga II: Ahora es Personal — Blood Bowl es violencia, pero con estilo.
+</footer>
+
+</body>
+</html>
