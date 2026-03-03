@@ -1,340 +1,600 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Spike Magazine</title>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spike Magazine</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Georgia", "Times New Roman", serif;
-            background-color: #f4f6fa;
-            color: #111;
-        }
+        <style>
+            body {
+                margin: 0;
+                font-family: "Georgia", "Times New Roman", serif;
+                background-color: #f4f6fa;
+                color: #111;
+            }
 
-        /* CABECERA */
+            /* CABECERA */
 
-        /* ===== SPIKE MAGAZINE STYLE HEADER ===== */
+            /* ===== SPIKE MAGAZINE STYLE HEADER ===== */
 
-        .spike-header {
-            background-color: #0b1d3a;
-            padding: 40px 0 30px 0;
-            position: relative;
-            overflow: hidden;
-        }
+            .spike-header {
+                background-color: #0b1d3a;
+                padding: 40px 0 30px 0;
+                position: relative;
+                overflow: hidden;
+            }
 
-        /* Franja diagonal */
-        .spike-banner {
-            background-color: #a40000;
-            transform: skewY(-5deg);
-            transform-origin: left center; /* 🔴 CLAVE */
-            padding: 0px 80px;
-            width: 100%;
-            margin-left: 0%;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+            /* Franja diagonal */
+            .spike-banner {
+                background-color: #a40000;
+                transform: skewY(-5deg);
+                transform-origin: left center; /* 🔴 CLAVE */
+                padding: 0px 80px;
+                width: 100%;
+                margin-left: 0%;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
 
-        .spike-banner h1 {
-            font-family: Impact, "Arial Black", sans-serif;
-            font-size: 72px;
-            margin: 0;
-            color: #ffffff;
-            letter-spacing: 3px;
-            text-shadow: 4px 4px 0 #000;
-        }
+            .spike-banner h1 {
+                font-family: Impact, "Arial Black", sans-serif;
+                font-size: 72px;
+                margin: 0;
+                color: #ffffff;
+                letter-spacing: 3px;
+                text-shadow: 4px 4px 0 #000;
+            }
 
-        /* ISSUE */
-        .spike-banner .issue {
-            transform: skewY(-5deg);
-            border: 3px solid #ffffff;
-            padding: 8px 14px;
-            font-weight: bold;
-            font-size: 20px;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
+            /* ISSUE */
+            .spike-banner .issue {
+                transform: skewY(-5deg);
+                border: 3px solid #ffffff;
+                padding: 8px 14px;
+                font-weight: bold;
+                font-size: 20px;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+            }
 
-        /* SUBTÍTULO */
-        .spike-subtitle {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 18px;
-            letter-spacing: 2px;
-            font-family: Arial, sans-serif;
-            color: #ffffff;              /* 🔴 CLAVE */
-            text-shadow: 2px 2px 0 #000; /* 🔴 CLAVE */
-        }
-        /* CONTENEDOR PRINCIPAL */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: 1fr 3fr 1fr;
-            gap: 20px;
-        }
+            /* SUBTÍTULO */
+            .spike-subtitle {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 18px;
+                letter-spacing: 2px;
+                font-family: Arial, sans-serif;
+                color: #ffffff;              /* 🔴 CLAVE */
+                text-shadow: 2px 2px 0 #000; /* 🔴 CLAVE */
+            }
+            /* CONTENEDOR PRINCIPAL */
+            .container {
+                max-width: 1200px;
+                margin: 20px auto;
+                display: grid;
+                grid-template-columns: 1fr 3fr 1fr;
+                gap: 20px;
+            }
 
-        /* BANNERS */
-        .ad {
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
+            /* BANNERS */
+            .ad {
+                background-color: white;
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: center;
+            }
 
-        .ad img {
-            max-width: 100%;
-        }
+            .ad img {
+                max-width: 100%;
+            }
 
-        .ad h3 {
-            font-size: 16px;
-            margin: 10px 0;
-            color: #0a2e6d;
-        }
+            .ad h3 {
+                font-size: 16px;
+                margin: 10px 0;
+                color: #0a2e6d;
+            }
 
-        /* ARTÍCULO */
-        article {
-            background-color: white;
-            padding: 25px;
-            border: 1px solid #ccc;
-        }
+            /* ARTÍCULO */
+            article {
+                background-color: white;
+                padding: 25px;
+                border: 1px solid #ccc;
+            }
 
-        article h2 {
-            font-size: 36px;
-            margin-top: 0;
-            color: #0a2e6d;
-            border-bottom: 3px solid #1e90ff;
-            padding-bottom: 10px;
-        }
+            article h2 {
+                font-size: 36px;
+                margin-top: 0;
+                color: #0a2e6d;
+                border-bottom: 3px solid #1e90ff;
+                padding-bottom: 10px;
+            }
 
-        article h3 {
-            font-size: 20px;
-            margin-top: 5px;
-            color: #555;
-            font-style: italic;
-        }
+            article h3 {
+                font-size: 20px;
+                margin-top: 5px;
+                color: #555;
+                font-style: italic;
+            }
 
-        .byline {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+            .byline {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 20px;
+            }
 
-        .columns {
-            column-count: 2;
-            column-gap: 40px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
+            .columns {
+                column-count: 2;
+                column-gap: 40px;
+                font-size: 18px;
+                line-height: 1.6;
+            }
 
-        .speaker {
-            font-weight: bold;
-            color: #0a2e6d;
-        }
+            .speaker {
+                font-weight: bold;
+                color: #0a2e6d;
+            }
 
-        .feature-img {
+            .feature-img {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .feature-img img {
+                max-width: 90%;
+                border: 4px solid #0a2e6d;
+            }
+
+            .inline-ad {
+            display: block;
             text-align: center;
             margin: 20px 0;
-        }
-        .feature-img img {
-            max-width: 90%;
-            border: 4px solid #0a2e6d;
-        }
+            }
 
-        .inline-ad {
-        display: block;
-        text-align: center;
-        margin: 20px 0;
-        }
-
-        .inline-ad img {
-        width: 70%;
-        max-width: 300px;
-        border: 2px solid #0a2e6d;
-        padding: 6px;
-        background-color: #fff;
-        }
+            .inline-ad img {
+            width: 70%;
+            max-width: 300px;
+            border: 2px solid #0a2e6d;
+            padding: 6px;
+            background-color: #fff;
+            }
 
 
 
-        /* PIE */
-        footer {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: #0a2e6d;
-            color: white;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
+            /* PIE */
+            footer {
+                margin-top: 30px;
+                padding: 15px;
+                background-color: #0a2e6d;
+                color: white;
+                text-align: center;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
 
-<header class="spike-header">
-    <div class="spike-banner">
-        <h1>SPIKE! MAGAZINE</h1>
-    </div>
-
-    <div class="spike-subtitle">
-        THE FANTASY BLOOD BOWL JOURNAL
-    </div>
-</header>
-
-<div class="container">
-
-    <!-- COLUMNA IZQUIERDA - PUBLICIDAD -->
-    <aside class="ad">
-        <h3>Bugman's Beer</h3>
-        <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45" alt="Bugmans Beer">
-        <p>La cerveza favorita de enanos, orcos y comentaristas sobrios.</p>
-    </aside>
-
-    <!-- ARTÍCULO CENTRAL -->
-    <article>
-        <h2>La Liga II: Ahora es Personal</h2>
-        <h3>La expectación se dispara en el mundo del Blood Bowl</h3>
-        <div class="byline">Narrado por Jim Johnson y Bob Bifford</div>
-
-        <!-- IMAGEN DESTACADA -->
-        <div class="feature-img">
-            <img src="https://static.wikia.nocookie.net/labibliotecadelviejomundo/images/5/5e/Jim_y_bob_arte_blood_bowl.jpg/revision/latest?cb=20240208161525&path-prefix=es" alt="Jim y Bob - Blood Bowl">
+    <header class="spike-header">
+        <div class="spike-banner">
+            <h1>SPIKE! MAGAZINE</h1>
         </div>
 
-      <div>
+        <div class="spike-subtitle">
+            THE FANTASY BLOOD BOWL JOURNAL
+        </div>
+    </header>
 
-            <p><span class="speaker">Jim Johnson:</span><br>
-            &mdash; Muy buenas tardes, aficionados al Blood Bowl. Se está disparando la expectación por el comienzo de la Liga II: Ahora es personal.</p>
+    <div class="container">
 
-            <p><span class="speaker">Bob Bifford:</span><br>
-            &mdash; Parece que la gente quiere seguir perdiendo su tiempo. No tienen mentalidad de tiburón.</p>
+        <!-- COLUMNA IZQUIERDA - PUBLICIDAD -->
+        <aside class="ad">
+            <h3>Bugman's Beer</h3>
+            <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45" alt="Bugmans Beer">
+            <p>La cerveza favorita de enanos, orcos y comentaristas sobrios.</p>
+        </aside>
 
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Yo creo que no tienen mentalidad de nada. Pero ese no es el tema Bob. Ya tenemos a 5 managers que han elegido sus equipos. Por el momento están confirmados que Pely va a jugar con Vampiros, Señor Pablito con habitantes del Inframundo, Elfonochasis llevará a No Muertos, Terrón a Enanos y Valdi a Lagartos. </p>
-            
-            <a href="No hagas click en urls que no debes!"
-            class="inline-ad" target="_blank">
-                <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
-                    alt="Bugman's Beer">
-            </a>            
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Estos managers han comprendido bien de qué va todo esto. Me alegra ver que no hay ningún equipo de esos que se dedican a esquivar. ¡Oh, là là! Mira aquí, soy un elfo, mira como te esquivo… qué son, ¿franceses?</p>
+        <!-- ARTÍCULO CENTRAL -->
+        <article>
+            <h2>La Liga II: Ahora es Personal</h2>
+            <h3>La expectación se dispara en el mundo del Blood Bowl</h3>
+            <div class="byline">Narrado por Jim Johnson y Bob Bifford</div>
 
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; No vayas tan deprisa, Bob. Aún quedan un mínimo de 3 entrenadores por elegir equipo. Además, según las normas, tiene que haber equipos de todo y el Señor Pablito ya se ha prestado públicamente para cambiar de equipo en caso que vea que falta algún tipo de equipos, como equipos ágiles.</p>
+            <!-- IMAGEN DESTACADA -->
+            <div class="feature-img">
+                <img src="https://static.wikia.nocookie.net/labibliotecadelviejomundo/images/5/5e/Jim_y_bob_arte_blood_bowl.jpg/revision/latest?cb=20240208161525&path-prefix=es" alt="Jim y Bob - Blood Bowl">
+            </div>
 
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; No tengo palabras Jim, y menos para el Señor Pablito. Ese pusilánime que jugó la anterior competición con un equipo de Calvos que parecían elfos.</p>
+        <div>
 
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Fuentes internas me comentan que el Señor Pablito mismo llegaba al vestuario antes de los partidos con una maquinilla de afeitar y les cortaba el pelo a todos. Excepto a la Señora Lu, la elfa bruja. Ella se negó rotundamente, y por eso se la veía por el campo con esa melena.</p>
+                <p><span class="speaker">Jim Johnson:</span><br>
+                &mdash; Muy buenas tardes, aficionados de Blood Bowl. Ya tenemos las últimas noticias de los equipos que faltan. Los entrenadores se han tomado su tiempo, eso es que han tomado decisiones lo más meditadas posibles.</p>
+                <p><span class="speaker">Bob Bifford:</span><br>
+                &mdash; Bueno, el mero hecho de participar en esta liga, es una señal de que no están meditadas. </p>
 
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Claramente la mejor jugadora de su equipo. Seguro que era porque no escuchaba al entrenador.</p>
+                <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                        alt="Bugman's Beer">
+                </a>
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; ¿Sientes esto que está pasando en el estudio, Bob? ¿¡Qué narices está pasando aquí!? ¿Qué es ese ruido, esa algarabía, ese alboroto?  </p>
 
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Ya que seguimos con este tema, y aunque no me guste continuar hablando del mismo manager, la rumorología en torno al equipo actual del Señor Pablito se dispara. Parece que este año claramente está apostando por ganar la liga Gravesen y para eso los rumores más recientes, apuntan que la contratación del mismísimo Cholo Simeone para confeccionar el equipo es inminente.</p>
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Ha llegado un golpe nuevo, el golpe del pañuelo</p>
 
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; ¿El cholo? Pero si ese hombre no gana ni a un deporte de mentira como es el fútbol, ¿cómo pretende pasarse ahora al Blood Bowl y ganar partidos?</p>
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; No me jodas, no puede ser… el entrenador Valdi se ha confabulado con Mediaset para traernos de vuelta una de las partes más oscuras del panorama televisivo de este país… nadie había pedido esto de vuelta pero nos trae el equipo de “Crónicas Saurianas!” </p>
 
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; No creo que su objetivo sea precisamente, Ejem, ganar partidos, Bob. Si por algo se destacan los equipos del Cholo es porque son unos guarros. Por lo tanto, yo me esperaría ver en cada partido a un mínimo de 3 expulsados. </p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; ¡Oooh! ¡Por fin un manager con criterio!</p>
-
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Bueno, si lo quieres llamar así… nos llega también información acerca de Elfonochasis. Al parecer, pese a lo engañoso de su nombre, está haciendo una pretemporada a marchas forzadas con los No Muertos. </p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; No sabía que Elfonochasis se dedicaba a la nigromancia. No creo que los manuales de esa magia quepan en One Page Rule. </p>
-
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Se le ha visto marchar por las calles de Motril por la noche llevando a su equipo por el Ladder, disputando partidos sin parar.</p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Un manager que se lo toma en serio. Por fin veremos verdadero progreso en la liga.</p>
-            
-            <a href="No hagas click en urls que no debes!"
-            class="inline-ad" target="_blank">
-                <img src="https://nufflezone.com/wp-content/uploads/2022/07/nurgle-king.png"
-                    alt="Nuffle King">
-            </a>        
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Se espera un progreso general. Hay managers que solo pueden ir a mejor, como Terrón y Valdi. Han elegido equipos más a su medida y se espera que den mucha más guerra durante esta temporada. </p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Claro, se dejaron guiar por algún youtuber aficionado a la hora de elegir equipo en vez de hacer caso a los expertos. </p>
-
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Si por experto te refieres a algún miembro de esta liga… bueno, creo que la palabra que buscas es payaso. </p>
-            
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Bueno si, cualquier calificativo despectivo sirve para hablar de esos charlatanes. </p>
-
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Por último, otro entrenador que parece que sigue viendo youtubers para elegir equipo es Pely, que va a jugar con Vampiros. La temporada pasada fue muy competitivo con un equipo de Orcos pero este año, parece que se ha convertido el mismo en un Vampiro y necesite lacayos para chuparles la sangre. Este hombre ha venido a sufrir. </p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Bueno, al menos nos reiremos un rato con todos estos patanes intentando jugar. </p>
-
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Espera un segundo Bob, me acaban de mandar esta información de última hora. Ha habido contactos entre Taliesin y un equipo de humanos, parece ser que se ha visto en Loja a los descartes del mítico Reikland Reavers. Un equipo de humanos. </p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Seguro que les ha engañado para que vayan a comer ROSCOS y FELIPES de Loja. </p>
-
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; Taliesin aprovechará un momento de debilidad para que firmen para jugar para él. Una vez firmados, seguro que para entrenar los pone a hacer pozos en busca de agua. </p>
-
-            <p><span class="speaker">Bob:</span><br>
-            &mdash; Hasta yo firmaría por esas condiciones laborales, Jim. Roscos y Felipes... </p>
-
-            
-            <a href="https://gourmet.ideal.es/actualidad/comerse-rosco-loja-supuesto-20241101234148-nt.html!"
-            class="inline-ad" target="_blank">
-                <img src="          https://s2.ppllstatics.com/ideal/gourmet/multimedia/2024/11/01/rosco-ksrC-U2201671145988rGG-1200x840@Ideal.jpg"
-                    alt="Roscos">
-            </a>
-          
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; ¡Deja de pensar con el estómago! En cuanto tengamos más noticias de otros entrenadores seguiremos informando. Se espera que para el próximo fin de semana pueda haber ya los primeros partidos. Cualquier pregunta para crear sus equipos, no duden en preguntar en los canales oficiales. </p>
-
-            
-            <p><span class="speaker">Jim:</span><br>
-            &mdash; No sé qué dudas puede haber. Está todo muy bien explicado en las reglas del torneo. </p>
-
-          <p><span class="speaker">Jim:</span><br>
-            &mdash; Nunca se sabe, Bob, con que nuevas estupideces pueden surgir, nunca se sabe….</p>
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; ¡Noooo! Ha vuelto el no cambié! Se me ha metido en la cabeza para no salir!</p>
                 
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; ¡Es una táctica horrible! Esta temporada viene muy fuerte para atacar a los contrincantes directamente desde el punto de vista psicológico. Estos Saurios van a ser aún más duros de lo que podamos pensar </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Sigo siendo la miiiisma, pero ya no sufro por tu querer!</p>
+                
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Por favor, Bob, calla de una vez. Tenemos que salir de este vacío existencial cuanto antes. Parece que van a jugar La Gartoja de Puerto Rico, Carmecko de Mairena, Lagarto Dantés, Padre Apeles, Encarnita la del Baptisterio Lagarto, Tamara Seisgarras, Carlos Jesús de Lagarticulín, Gecko Porras, Señor Gecklindo, El Pozi, El Dioni. </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Por lo menos, no veremos al eslizón Izaguirre bajarse los pantalones en medio del partido. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Según comunica la dirección de la liga, el desconocimiento por parte de cualquier entrenador de estos jugadores, supondrá su automática expulsión. </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; El castigo parece más un premio, Jim…  </p>
+
+                <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://nufflezone.com/wp-content/uploads/2022/07/nurgle-king.png"
+                        alt="Nuffle King">
+                </a>        
+               
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; No tentemos a la suerte, Bob. Vamos a cambiar de tema, parece que hemos vuelto a tener… un momento. ¿Hueles eso Bob? ¿Desde cuándo nuestro chef prepara curry para merendar? </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash;No lo sé. Pero me está llegando un olor que alimentaría a cualquiera. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; No se lo van a creer, Taliesin está apareciendo en el estudio con un equipo de humanos que vienen bailando detrás de él… al más puro estilo de “Bollywood”.  </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash;La rumorología sobre la expansión de Triunvirato se confirma.  </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Si, Taliesin ha sido nombrado presidente de Triunvirato Outsourced y ha decidido subcontratar a su equipo!  </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash;La madre que me parió…  </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Inspirado por las empresas más punteras del mundo tecnológico, Taliesin y su mentalidad de tiburón para los negocios, no se ha quedado atrás. En alianza con el gobierno Indú, Triunvirato se establece en la región y ha contratado a la familia Nahasapeemapetilon. Apú encabezará el equipo en lo que promete ser un espectáculo dantesco. </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Espero que se acuerden de ir a jugar el día que toque. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Son sus costumbres Bob, tenemos que adaptarnos a los jugadores. Esta temporada, Taliesin parece que va a volver a dar mucha guerra con un equipo que lo mismo que juega a BloodBowl por la mañana y que tiene perfiles falsos en Twitter por la tarde. </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Hasta dónde vamos a llegar… </p>
+
+                 <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                        alt="Bugman's Beer">
+                </a>
+                
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Nos llegan noticias del entrenador más indeseable de todos. La confección de su equipo, moradores del inframundo, avanza a pasos, extraños creo que es la forma más correcta de definirlo.  </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; ¿Qué nueva estupidez ha hecho este hombre, Jim?  </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Según nos confirma la Señora Lu, el único punto de cordura de su vida, se personó él mismo en el inframundo para seleccionar a los jugadores. </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Solo pueden ocurrir cosas buenas con esa premisa. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Si, para sorpresa de nadie, se perdió por el camino. Tenía que estar muy perdido, porque por el camino se encontró con “La más grande” </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; ¿La más grande? ¿Roxanna Darknail? ¿Karla Von Kill? No sé Jim, no me suena de nada. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; La más grande, Rocío Jurado. Que no sabes nada del panorama musical.  </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; No sé qué decirte ¿Y qué narices pinta Rocío Jurado en la liga de Blood Bowl? Ahora es personal </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Precisamente, el señor Pablito le contó que estaba confeccionando un equipo para la liga y le respondió “menos mal que eres apañao, porque madre mía… voy a echarte una mano, sobre todo que ahora es personal. Bajaré contigo al inframundo y te ayudaré a seleccionar el equipo, conozco a muchos indeseables, bajo una condición importante” </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; ¿Qué condición Bob? </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Rocío Jurado exige jugar en la liga reencarnada en una rata gigante. El resto de sus compañeros los va a seleccionar ella.  </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; ¿En serio?¿Quién se cree esto? </p>
+
+                <p>
+                    <span class="speaker">Jim:</span><br>
+                    &mdash; Nadie Bob, pero y qué más da. El proceso de selección por parte de ella ha sido el siguiente mientras se paseaban por el inframundo:
+                </p>
+
+                <p style="margin-left:20px;">
+                    “Esos goblins que tú ves allí<br>
+                    que parecen tan galantes,<br>
+                    tan atentos y arrogantes,<br>
+                    los conozco como a mí.<br><br>
+
+                    Esos skavens que tú ves ahí,<br>
+                    que aparentan ser divinos,<br>
+                    tan afables y efusivos,<br>
+                    solo saben hacer sufrir.<br><br>
+
+                    Contrataremos a un gran necio,<br>
+                    a ese estúpido engreído,<br>
+                    al egoísta, al caprichoso,<br>
+                    al inconsciente, al presumido,<br>
+                    al falso, al enano, al rencoroso,<br>
+                    que no tengan corazón.<br><br>
+
+                    Todos llenos de celos,<br>
+                    sin razones ni motivos,<br>
+                    como el viento impetuoso,<br>
+                    pocas veces cariñosos,<br>
+                    al inseguro de sí mismo,<br>
+                    al soportable como amigo<br>
+                    y al insufrible.”
+                </p>
+
+                
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Sin comentarios… ¿Y cómo se llama el equipo? </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Se llama, “Esos despojos”.  </p>
+                
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Arráncame ya los ojos por favor… </p>
+
+                <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                        alt="Bugman's Beer">
+                </a>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Ricardo nos ha hecho llegar una ficha oficial —escrita a lápiz y manchada de cerveza— que su equipo viene desde el huerto trasero de Avelorn. Aunque “huerto” aquí significa “sitio donde algo explotó una vez”.  </p>
+                
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Y “trasero” porque todos vienen corriendo mirando hacia atrás, Jim. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Se hacen llamar Taberna Casa Paco, patrocinados por su tabernero, mentor espiritual y, según rumores, principal instigador de que alguien les dé dos buenos guantazos. </p>
+                
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Paco les convenció de que el Blood Bowl era el deporte del momento. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Lo cual demuestra, Bob, que Paco odia profundamente a estos halflings. </p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; O que ama la violencia gratuita. Yo apuesto por lo segundo. </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; El equipo está formado por científicos del puchero, ingenieros del cucharón y doctores en cerveza aguada. Cada noche defienden su tesis empinando el codo en la taberna, y cada mañana olvidan por qué se apuntaron a una liga.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Jim, mira ese de ahí tambaleándose. ¿Ese es el capitán? </p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; No, Bob. Ese es Andresillo “el Entérao”, MVP del primer partido del barrio. Lideró al equipo contra unos snotlings ciegos.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Partido histórico, Jim. Nadie sabía dónde estaba el balón, pero Andresillo estaba muy seguro de que él sí.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; A su lado tenemos a Oceíllo “el Mostro”.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Ah, sí. El halfling capaz de explicarte durante dos horas por qué no ha hecho un pase… justo después de no hacerlo.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Según las estadísticas, Bob, nunca ha completado un pase en mano.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Pero ha completado diecisiete discursos postpartido. Récord de liga.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Y atención, porque llega el gran fichaje estrella: Joaquín “el Lotero”.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Jim… ese nombre me da escalofríos.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; A mí también, Bob. Donde juega Joaquín, el equipo desciende de categoría. No es mala suerte… es constancia.</p>
+                
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Los otros equipos ya están consultando la tabla de descenso solo de verle calentar.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Aun así, Bob, el equipo está motivado.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Claro que sí, Jim. Les han prometido que si sobreviven al partido, hay tercer tiempo.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Y su único objetivo es llegar vivos a ese tercer tiempo y quemar sus últimas monedas de oro en el bar de Paco.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Si ganan, lo celebran. Si pierden, lo celebran. Si alguien explota… lo celebran.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Porque así es como manda Nuffle.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Exacto, Jim. Esto no es un equipo de Blood Bowl.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Es una excusa para beber con hombreras.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Y ahora, Jim… agárrate, porque el árbitro ya está dudando de su carrera profesional.</p>
+
+                <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                        alt="Bugman's Beer">
+                </a>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Señoras y señores, no se vayan. Esto promete ser inolvidable.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; O al menos imposible de explicar en el acta. 🍺🏈</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Y ahora, vamos a hacer una entrevista personal al glorioso líder de Triunvirato. Espere un momento, pero, ¿qué hace vestido con una toga blanca?</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Por favor, que no se le caiga…</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Vemos que está conjurando un hechizo, se abren las criptas del estadio y entran, tambaleando como ideas mal comprendidas, ¡los Cogito, Ergo Muero! Liderados por Sarcófates, el maestro del mayúsculo mamporro moral, y su segundo al mando, el siempre rígido Aristótelas.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Qué es esto que vemos Jim, han aparecido en la línea de defensa, Descarnés de Pascal y Nietzchifrágil. Preparan su argumento más contundente: el placaje.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; No son solo los líneas Bob, los ghouls Diogruñes, Epicrotón, Inmortal Kant y Pitagarras traerán la dialéctica del hambre, filosofando sobre la anatomía del rival en tiempo real.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Detrás, los grandes pensadores de la descomposición —Husserl el Disperso, Spinoza el Pegado, Senecae, Parmenidescanses— mueven su cuerpo con la cadencia de un tratado… lleno de erratas.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Juan por fin ha orientado la filosofía hacia de una forma razonable.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; En resumen, amigos y enemigos de la razón, ¡aquí está el único equipo que demuestra que el pensamiento crítico también puede romperte las piernas!</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Pegan, luego existen.</p>
+
+                <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                        alt="Bugman's Beer">
+                </a>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; A partir de ahora, pongan sus cuellos a cubierto, llegan… Los Chupópteros del Sur.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Vampiros, Jim. Pero no de castillo oscuro y niebla. Estos vienen con sol, duende y compás.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Exacto, Bob. Su origen se remonta al decadente —pero muy orgulloso— Cortijo Jurado. Un grupo de vampiros andaluces decidió que conquistar aldeas era anticuado…</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; …y que era mucho más divertido fichar humanos y ponerles hombreras.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Juegan con 40% estrategia, 30% arte, 20% improvisación…</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; …y 10% autocontrol. Y bajando.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Su mayor enemigo no es el rival.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Es la Sed Descontrolada™. Más de un touchdown ha terminado en merienda.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Tienen un pacto: no morder antes del descanso.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Y los humanos no corren más rápido que el balón. Nadie habla del partido contra los Orcos de Villamartillo.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Elegantes, dramáticos y peligrosos…</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; …sobre todo entre ellos.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Así son, señoras y señores, Los Chupópteros del Sur.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Ahora, Jim… ¿eso es sangre en la banda?</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Publicidad, Bob. Esperemos.</p>
+
+                <a href="No hagas click en urls que no debes!"
+                class="inline-ad" target="_blank">
+                    <img src="https://preview.redd.it/1eymb0hguu171.jpg?width=440&format=pjpg&auto=webp&s=abdcec60e0c6d8f01d34fe2a879c6982bbdb8c45"
+                        alt="Bugman's Beer">
+                </a>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Nos acaba de llegar una retransmisión de Soke en referencia a su equipo, los “Banana boyz”.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; ¿Banana boyz?</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Sí, al parecer un goblin encontró un día una banana en medio de un campo de juego. El goblin, a quien a partir de ahora en esta retransmisión llamaremos cariñosamente, el banano, empezó a adorar esa banana y creó un equipo en torno a ella.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Pero Jim, a mí esto me suena muy extraño ¿Esa banana, no se ha podrido? ¿Tienen un super frigorífico que evita que se ponga mal? O está podrida del todo, y aún así, el banano se ha inventado este cuento para inscribirse en la liga. A mí me suena más a un grupo K-Pop.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Eso estaría mucho mejor, que se dedicaran a cantar. Sin embargo, me llegan imágenes de la “banana” ¿Es lo que parece? ¿Es un dildo, Bob?</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Creo que los Banana Boyz se lo pasan bien tanto dentro como fuera del campo.</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Tienen la actitud y las herramientas necesarias para hacerlo. Se nota claramente la mano del entrenador. Soke deberá como consigue mantener así de motivados a sus jugadores.</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; No sé Jim si yo quiero saber más del tema…</p>
+
+                <p><span class="speaker">Jim:</span><br>
+                &mdash; Ni tú ni nadie…</p>
+
+                <p><span class="speaker">Bob:</span><br>
+                &mdash; Eeemmm… BLOOD BOWL!</p>
+            
+            </div>
+        </article>
+
+        <!-- COLUMNA DERECHA - PUBLICIDAD -->
+        <aside class="ad">
+            <h3>Nurgle King</h3>
+            <img src="https://nufflezone.com/wp-content/uploads/2022/07/nurgle-king.png" alt="Nurgle King">
+            <p>Aquí Nurgle es el king.</p>
 
 
+            <hr>
 
-          
-          
-        </div>
-    </article>
+            <h3>Blood Weiser</h3>
+            <img src="https://fumbbl.com/i/431582" alt="Blood Weiser">
+            <p>La cerveza espumosa que hace perder jugadores antes de perder partidos.</p>
+        </aside>
 
-    <!-- COLUMNA DERECHA - PUBLICIDAD -->
-    <aside class="ad">
-        <h3>Nurgle King</h3>
-        <img src="https://nufflezone.com/wp-content/uploads/2022/07/nurgle-king.png" alt="Nurgle King">
-        <p>Aquí Nurgle es el king.</p>
+    </div>
 
+    <footer>
+        © Cabal Vision — Liga II: Ahora es Personal — Blood Bowl es violencia, pero con estilo.
+    </footer>
 
-        <hr>
-
-        <h3>Blood Weiser</h3>
-        <img src="https://fumbbl.com/i/431582" alt="Blood Weiser">
-        <p>La cerveza espumosa que hace perder jugadores antes de perder partidos.</p>
-    </aside>
-
-</div>
-
-<footer>
-    © Cabal Vision — Liga II: Ahora es Personal — Blood Bowl es violencia, pero con estilo.
-</footer>
-
-</body>
-</html>
+    </body>
+    </html>
